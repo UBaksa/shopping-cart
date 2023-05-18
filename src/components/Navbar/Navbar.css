@@ -1,0 +1,30 @@
+.navbar {
+  height: 15vh;
+  background-color: rgb(255, 221, 0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.links {
+  display: flex;
+  width: 20%;
+  justify-items: flex-end;
+  gap: 20px;
+}
+.logo {
+  height: 100px;
+  width: auto;
+  padding: 10px;
+}
+.activeStyles {
+  text-decoration: none;
+  background-color: bisque;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+}
+.classicStyles {
+  text-decoration: none;
+  border-radius: 15px;
+  color: black;
+}
