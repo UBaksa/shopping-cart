@@ -1,5 +1,10 @@
 import React from "react";
+import ProductCard from "../../components/Card/ProductCard";
 
 export default function Products() {
-  return <div>Products</div>;
+  return (
+    <>
+      <ProductCard />
+    </>
+  );
 }
