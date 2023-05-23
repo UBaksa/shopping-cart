@@ -12,7 +12,7 @@ export default function ProductCard({
   onPress,
 }) {
   return (
-    <Card sx={{ width: 400, height: 450 }}>
+    <Card sx={{ width: 310, height: 450 }}>
       <img
         style={{ height: 300, width: 400, objectFit: "cover" }}
         src={productImage}

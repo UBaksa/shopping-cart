@@ -5,10 +5,14 @@ import Homepage from "./pages/Homepage/Homepage";
 import Products from "./pages/Products/Products";
 import Cart from "./pages/Cart/Cart";
 import { Routes, Route } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
     <div className="App">
+      <div className="ehehe">
+        <Toaster></Toaster>
+      </div>
       <Navbar />
       <main style={{ minHeight: "70vh" }}>
         <Routes>
