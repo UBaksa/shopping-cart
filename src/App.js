@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <div className="ehehe">
-        <Toaster></Toaster>
+        <Toaster />
       </div>
       <Navbar />
       <main style={{ minHeight: "70vh" }}>

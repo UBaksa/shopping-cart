@@ -10,6 +10,7 @@ export default function ProductCard({
   productPrice,
   productImage,
   onPress,
+  pieces = 0,
 }) {
   return (
     <Card sx={{ width: 310, height: 450 }}>
@@ -29,7 +30,7 @@ export default function ProductCard({
             variant="body1"
             color="text.primary"
             size="large"
-            fontSize={20}
+            fontSize={18}
             fontWeight={600}
           >
             Price: {productPrice} EUR
