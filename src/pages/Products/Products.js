@@ -3,6 +3,7 @@ import ProductCard from "../../components/Card/ProductCard";
 import "./Products.css";
 import Pagination from "@mui/material/Pagination";
 import { AppContext } from "../../context/AppContext";
+import { toast } from "react-hot-toast";
 
 export default function Products() {
   const { products } = useContext(AppContext);
@@ -20,10 +21,17 @@ export default function Products() {
         {products
           .map((product) => (
             <ProductCard
+              key={product.id}
+              id={product.id}
               productName={product.title}
               productPrice={product.price}
               productImage={product.imageURL}
-              onPress={() => {}}
+              addToCart={() => {
+                addToCart(product.id);
+              }}
+              deleteFromCart={() => {
+                toast.success("Successfully deleted from cart!");
+              }}
             />
           ))
           .slice((page - 1) * productPerPage, page * productPerPage)}
