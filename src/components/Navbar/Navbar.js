@@ -1,13 +1,18 @@
 import React from "react";
 import "./Navbar.css";
-import logo from "../assets/images/logo.png";
 import { NavLink } from "react-router-dom";
-// moze i sa img src={require("putanja do slike")}
+// import logo from "../../assets/images/logo.png";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+
 export default function Navbar() {
   return (
     <header className="navbar">
       <NavLink to={"/"}>
-        <img className="logo" src={logo} />
+        <img
+          src={require("../../assets/images/logo.png")}
+          alt="logo"
+          className="logo"
+        />
       </NavLink>
       <div className="links">
         <NavLink
@@ -24,7 +29,7 @@ export default function Navbar() {
             isActive ? "activeStyles" : "classicStyles"
           }
         >
-          <h2>CART</h2>
+          <ShoppingCartIcon className="cartIcon" fontSize="large" />
         </NavLink>
       </div>
     </header>

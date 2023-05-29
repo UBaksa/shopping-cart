@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
@@ -26,7 +26,8 @@ export default function ProductCard({
       setIsAdded(false);
     }
   }, [id, cart]);
-  console.log({ isAdded });
+  // console.log({ isAdded });
+
   return (
     <Card sx={{ maxWidth: 450 }}>
       <CardMedia sx={{ height: 250 }} image={productImage} title="" />
