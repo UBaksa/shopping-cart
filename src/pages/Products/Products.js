@@ -1,23 +1,25 @@
 import React, { useContext, useState } from "react";
-import ProductCard from "../../components/Card/ProductCard";
+import { AppContext } from "../../context/AppContext";
 import "./Products.css";
 import Pagination from "@mui/material/Pagination";
-import { AppContext } from "../../context/AppContext";
+import ProductCard from "../../components/Card/ProductCard";
 import { toast } from "react-hot-toast";
 
 export default function Products() {
-  const { products } = useContext(AppContext);
+  const { products, addToCart, cart, deleteFromCart } = useContext(AppContext);
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
-    window.scrollTo(0, 0); //da se podigne skroz na vrh kad se promeni stranica.
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
-  const productPerPage = 12;
-  const numOfPages = Math.ceil(products.length / productPerPage);
-  // console.log(products);
+  const productsPerPage = 15;
+  const numOfPages = Math.ceil(products.length / productsPerPage);
+
+  console.log(products);
+  console.log(cart);
   return (
     <>
-      <div className="card">
+      <div className="cards">
         {products
           .map((product) => (
             <ProductCard
@@ -30,17 +32,15 @@ export default function Products() {
                 addToCart(product.id);
               }}
               deleteFromCart={() => {
-                toast.success("Successfully deleted from cart!");
+                deleteFromCart(product.id);
               }}
             />
           ))
-          .slice((page - 1) * productPerPage, page * productPerPage)}
+          .slice((page - 1) * productsPerPage, page * productsPerPage)}
       </div>
-      <div className="paginacija">
+      <div className="pagination">
         <Pagination
           size="large"
-          shape="rounded"
-          color="error"
           count={numOfPages}
           page={page}
           onChange={handleChange}

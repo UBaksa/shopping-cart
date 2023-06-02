@@ -1,13 +1,11 @@
-.card {
+.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  margin: 10px;
+  margin: 20px;
 }
-body {
-  background-color: #eee;
-}
-.paginacija {
+
+.pagination {
   margin: 30px;
   display: flex;
   justify-content: center;
