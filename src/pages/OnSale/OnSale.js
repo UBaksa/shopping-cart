@@ -1,35 +1,35 @@
 import React, { useContext, useState } from "react";
 import { AppContext } from "../../context/AppContext";
-import "./Products.css";
+import "./OnSale.css";
 import Pagination from "@mui/material/Pagination";
-import ProductCard from "../../components/Card/ProductCard";
+import SaleProductCard from "../../components/Card/SaleProductCard";
 
-export default function Products() {
-  const { products, addToCart, deleteFromCart } = useContext(AppContext);
+export default function OnSale() {
+  const { onSaleProducts, addToCart, deleteFromCart } = useContext(AppContext);
   const [page, setPage] = useState(1);
   const handleChange = (event, value) => {
     setPage(value);
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
   const productsPerPage = 15;
-  const numOfPages = Math.ceil(
-    products.filter((product) => product.quantity <= 20).length /
-      productsPerPage
-  );
+  const numOfPages = Math.ceil(onSaleProducts.length / productsPerPage);
 
-  console.log(products);
+  console.log(onSaleProducts);
   return (
     <>
       <div className="cards">
-        {products
-          .filter((product) => product.quantity <= 20)
+        {onSaleProducts
           .map((product) => (
-            <ProductCard
+            <SaleProductCard
               key={product.id}
               id={product.id}
               productName={product.title}
-              productPrice={product.price}
+              productPrice={
+                product.price -
+                (product.price * product.discountPercentage) / 100
+              }
               productImage={product.imageURL}
+              currencySign={"EUR"}
               addToCart={() => {
                 addToCart(product.id);
               }}

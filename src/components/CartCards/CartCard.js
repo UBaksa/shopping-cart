@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./CartCards.css";
+import "./CartCard.css";
 import { AppContext } from "../../context/AppContext";
 import { Modal } from "@mui/material";
 import ModalClose from "@mui/joy/ModalClose";

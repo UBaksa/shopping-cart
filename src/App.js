@@ -1,24 +1,28 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
+import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 import Homepage from "./pages/Homepage/Homepage";
 import Products from "./pages/Products/Products";
 import Cart from "./pages/Cart/Cart";
-import { Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import OnSale from "./pages/OnSale/OnSale";
+import Order from "./pages/Order/Order";
 
 function App() {
   return (
     <div className="App">
-      <div className="ehehe">
-        <Toaster />
+      <div>
+        <Toaster position="bottom-right" reverseOrder={false} />
       </div>
       <Navbar />
       <main style={{ minHeight: "70vh" }}>
         <Routes>
-          <Route path="/homepage" element={<Homepage />}></Route>
-          <Route path="/products" element={<Products />}></Route>
-          <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/sale" element={<OnSale />} />
+          <Route path="/order" element={<Order />} />
         </Routes>
       </main>
       <Footer />
