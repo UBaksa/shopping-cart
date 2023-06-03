@@ -1,6 +1,6 @@
 .navbar {
   height: 15vh;
-  background-color: #2e5b36;
+  background-color: #2e3a5b;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21,14 +21,14 @@
 .activeStyles {
   padding: 10px;
   text-decoration: none;
-  background-color: #d8ec81;
+  background-color: #ffffff;
   border-radius: 15px;
-  color: #000000;
+  color: #2e3a5b;
 }
 
 .classicStyles {
   padding: 10px;
   text-decoration: none;
   border-radius: 15px;
-  color: #ffffff;
+  color: yellow;
 }

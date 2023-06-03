@@ -9,7 +9,7 @@ export default function Navbar() {
     <header className="navbar">
       <NavLink to={"/"}>
         <img
-          src={require("../../assets/images/logo.png")}
+          src={require("../../assets/images/6572026.png")}
           alt="logo"
           className="logo"
         />
