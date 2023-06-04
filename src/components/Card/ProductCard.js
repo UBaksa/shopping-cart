@@ -29,42 +29,44 @@ export default function ProductCard({
   // console.log({ isAdded });
 
   return (
-    <Card sx={{ maxWidth: 450 }}>
-      <CardMedia sx={{ height: 250 }} image={productImage} title="" />
-      <CardContent>
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="div"
-          style={{ height: "55px" }}
-        >
-          {productName}
-        </Typography>
-        <Typography
-          gutterBottom
-          variant="h5"
-          component="div"
-          className="product-price"
-          style={{ fontWeight: "700" }}
-        >
-          {productPrice}
-          EUR
-        </Typography>
-        <CardActions style={{ display: "flex", justifyContent: "center" }}>
-          {!isAdded ? (
-            <Button
-              style={{ color: "#2e5b36", fontWeight: "700" }}
-              onClick={addToCart}
-              size="small"
-              className="btn-add"
-            >
-              ADD TO CART
-            </Button>
-          ) : (
-            <DeleteButton onDelete={deleteFromCart} />
-          )}
-        </CardActions>
-      </CardContent>
-    </Card>
+    <div className="card">
+      <Card sx={{ maxWidth: 450 }}>
+        <CardMedia sx={{ height: 250 }} image={productImage} title="" />
+        <CardContent>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            style={{ height: "55px" }}
+          >
+            {productName}
+          </Typography>
+          <Typography
+            gutterBottom
+            variant="h5"
+            component="div"
+            className="product-price"
+            style={{ fontWeight: "700" }}
+          >
+            {productPrice}
+            EUR
+          </Typography>
+          <CardActions style={{ display: "flex", justifyContent: "center" }}>
+            {!isAdded ? (
+              <Button
+                style={{ color: "#2e5b36", fontWeight: "700" }}
+                onClick={addToCart}
+                size="small"
+                className="btn-add"
+              >
+                ADD TO CART
+              </Button>
+            ) : (
+              <DeleteButton onDelete={deleteFromCart} />
+            )}
+          </CardActions>
+        </CardContent>
+      </Card>
+    </div>
   );
 }

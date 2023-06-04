@@ -21,7 +21,7 @@
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 20%;
   margin-right: 15px;
 }
 
@@ -29,14 +29,14 @@
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #333333;
+  color: #2e3a5b;
   width: 10rem;
 }
 
 .productPrice {
   font-size: 16px;
   font-weight: 500;
-  color: #2e8540;
+  color: #2e3a5b;
 }
 
 .product-quantity {

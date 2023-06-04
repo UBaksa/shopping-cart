@@ -3,7 +3,7 @@ import { useContext } from "react";
 import IconButton from "@mui/material/IconButton";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { AppContext } from "../../context/AppContext";
-import CartCards from "../../components/CartCards/CartCard";
+import CartCards from "../../components/CartCards/CartCards";
 import "./Cart.css";
 import { useNavigate } from "react-router-dom";
 
@@ -28,11 +28,10 @@ export default function Cart() {
       {cart.length !== 0 ? (
         <div className="cartCards">
           <div className="cartCardsContainer">
-            <h1 className="korpa"> Your cart</h1>
             <h1 className="korpa-k">
               Total price in your cart:{"   "}
               {totalPrice}
-              {"EUR"}
+              {" EUR"}
             </h1>
           </div>
           {cart.map((product) => (

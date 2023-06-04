@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./CartCard.css";
+import "./CartCards.css";
 import { AppContext } from "../../context/AppContext";
 import { Modal } from "@mui/material";
 import ModalClose from "@mui/joy/ModalClose";
@@ -35,7 +35,6 @@ export default function CartCards({
             <h2 className="productName">Product: {productName}</h2>
           </div>
         </div>
-
         <div
           style={{
             display: "flex",
@@ -44,6 +43,19 @@ export default function CartCards({
             alignItems: "center",
           }}
         >
+          <Button
+            onClick={() => {
+              increase(id);
+            }}
+            style={{
+              width: 30,
+              backgroundColor: "#2e3a5b",
+              color: "yellow",
+              fontWeight: "bolder",
+            }}
+          >
+            +
+          </Button>
           <div className="product-details2">
             <p className="productPrice">
               Price of item: {productPrice}
@@ -62,11 +74,16 @@ export default function CartCards({
               onClick={() => {
                 decrease(id);
               }}
-              style={{ width: 30 }}
+              style={{
+                width: 30,
+                backgroundColor: "#2e3a5b",
+                color: "yellow",
+                fontWeight: "bolder",
+              }}
             >
               -
             </Button>
-            <Button
+            {/* <Button
               color="success"
               onClick={() => {
                 increase(id);
@@ -74,7 +91,7 @@ export default function CartCards({
               style={{ width: 30 }}
             >
               +
-            </Button>
+            </Button> */}
           </div>
         </div>
         <div>
@@ -83,12 +100,16 @@ export default function CartCards({
           </DeleteButton>
           <Modal open={open} onClose={handleClose}>
             <ModalDialog color="danger" size="lg" variant="soft">
-              <Typography style={{ margin: "20px" }}>
+              <Typography style={{ margin: "20px", textAlign: "center" }}>
                 Are you sure you want to remove <br></br>this product?
               </Typography>
               <div
                 className="buttons"
-                style={{ display: "flex", justifyContent: "center" }}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  gap: "10px",
+                }}
               >
                 <Button
                   onClick={() => {
