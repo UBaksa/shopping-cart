@@ -83,15 +83,6 @@ export default function CartCards({
             >
               -
             </Button>
-            {/* <Button
-              color="success"
-              onClick={() => {
-                increase(id);
-              }}
-              style={{ width: 30 }}
-            >
-              +
-            </Button> */}
           </div>
         </div>
         <div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import IconButton from "@mui/material/IconButton";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import ShoppingCartTwoToneIcon from "@mui/icons-material/ShoppingCartTwoTone";
 import { AppContext } from "../../context/AppContext";
 import CartCards from "../../components/CartCards/CartCards";
 import "./Cart.css";
@@ -75,15 +75,16 @@ export default function Cart() {
           <IconButton
             style={{
               marginTop: "-40px",
-              backgroundColor: "green",
+              backgroundColor: "#2e3a5b",
               borderRadius: "5px",
             }}
             color=""
             aria-label="add to shopping cart"
           >
+            <ShoppingCartTwoToneIcon style={{ color: "yellow" }} />
             <a
               style={{
-                color: "#ffffff",
+                color: "yellow",
                 textDecoration: "none",
                 fontWeight: "700",
               }}
@@ -91,7 +92,7 @@ export default function Cart() {
             >
               Go shopping
             </a>
-            <AddShoppingCartIcon />
+            <ShoppingCartTwoToneIcon style={{ color: "yellow" }} />
           </IconButton>
         </div>
       )}

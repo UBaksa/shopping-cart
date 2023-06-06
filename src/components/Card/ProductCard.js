@@ -30,14 +30,18 @@ export default function ProductCard({
 
   return (
     <div className="card">
-      <Card sx={{ maxWidth: 450 }}>
+      <Card sx={{ maxWidth: 450 }} style={{ borderRadius: "7%" }}>
         <CardMedia sx={{ height: 250 }} image={productImage} title="" />
         <CardContent>
           <Typography
             gutterBottom
             variant="h5"
             component="div"
-            style={{ height: "55px" }}
+            style={{
+              height: "55px",
+              fontSize: "1.1rem",
+              marginBottom: "-0.5rem",
+            }}
           >
             {productName}
           </Typography>
@@ -54,7 +58,13 @@ export default function ProductCard({
           <CardActions style={{ display: "flex", justifyContent: "center" }}>
             {!isAdded ? (
               <Button
-                style={{ color: "#2e5b36", fontWeight: "700" }}
+                style={{
+                  color: "yellow",
+                  fontWeight: "700",
+                  border: "1px solid #2e3a5b",
+                  borderRadius: "1rem",
+                  backgroundColor: "#2e3a5b",
+                }}
                 onClick={addToCart}
                 size="small"
                 className="btn-add"

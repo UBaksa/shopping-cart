@@ -16,7 +16,7 @@ export default function DeleteButton({ onDelete }) {
         onClick={handleDelete}
         endDecorator={
           <ChipDelete color="danger" variant="plain">
-            <DeleteForever />
+            {/* <DeleteForever /> */}
           </ChipDelete>
         }
       >

@@ -10,7 +10,7 @@ export default function Homepage() {
         </h1>
         <p className="smaller-text">
           <a className="products" href="/products">
-            Check our products
+            Check our products ➜
           </a>
         </p>
       </div>
