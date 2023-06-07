@@ -60,8 +60,6 @@ function FormCart() {
         />
         {greske.imeNaKartici && <p>{greske.imeNaKartici}</p>}
         <br />
-        <br />
-
         <label htmlFor="broj_kartice">Broj kartice:</label>
         <input
           type="text"
@@ -75,6 +73,8 @@ function FormCart() {
         <br />
         <div className="wrap">
           <label htmlFor="datum_isticanja">Datum isticanja:</label>
+          <br></br>
+          <br></br>
           <input
             type="text"
             id="datum_isticanja"
@@ -86,8 +86,10 @@ function FormCart() {
           {greske.datumIsticanja && <p>{greske.datumIsticanja}</p>}
           <br />
           <br />
-
-          <label htmlFor="sigurnosni_kod">Sigurnosni kod:</label>
+          <hr></hr>
+          <label style={{ marginLeft: "2rem" }} htmlFor="sigurnosni_kod">
+            Sigurnosni kod:
+          </label>
           <input
             type="text"
             id="sigurnosni_kod"
@@ -100,7 +102,7 @@ function FormCart() {
           <br />
         </div>
         <div className="button">
-          <input type="submit" value="Dodaj karticu" />
+          <input type="submit" value="Dodaj kreditnu karticu" />
         </div>
       </form>
     </div>

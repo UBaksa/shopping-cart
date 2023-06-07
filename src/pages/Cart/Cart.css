@@ -26,3 +26,37 @@
   padding: 10px;
   border-radius: 10px;
 }
+
+.buy {
+  font-weight: bold;
+  padding: auto;
+  border: solid 2px #2e3a5b;
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  height: 2rem;
+  width: 20rem;
+  margin: auto;
+  background-color: yellow;
+  color: #2e3a5b;
+}
+
+.buy:hover {
+  cursor: pointer;
+  transition: transform 0.3s ease-out;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.buy {
+  animation: fade-in 0.3s ease-out;
+}

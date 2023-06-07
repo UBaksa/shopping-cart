@@ -21,7 +21,12 @@ label {
 }
 
 input[type="text"] {
+  margin: auto;
+  background-color: #2e3a5b;
+  color: yellow;
+  font-weight: 700;
   padding: 10px;
+  width: 15rem;
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -29,8 +34,8 @@ input[type="text"] {
 
 input[type="submit"] {
   padding: 10px;
-  background-color: #4caf50;
-  color: white;
+  background-color: #2e3a5b;
+  color: yellow;
   border: none;
   border-radius: 5px;
   cursor: pointer;

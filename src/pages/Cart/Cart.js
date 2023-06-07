@@ -58,7 +58,7 @@ export default function Cart() {
               })
             }
           >
-            BUY
+            <p className="buy">Buy</p>
           </p>
         </div>
       ) : (

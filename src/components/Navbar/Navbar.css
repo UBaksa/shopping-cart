@@ -36,3 +36,12 @@
   position: relative;
   display: flex;
 }
+
+.cart-lenght {
+  height: 20px;
+  width: 15px;
+  border-radius: 50%;
+  color: black;
+  font-weight: bolder;
+  background-color: yellow;
+}
