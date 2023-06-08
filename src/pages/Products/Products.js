@@ -12,19 +12,18 @@ export default function Products() {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   };
   const productsPerPage = 15;
-  const numOfPages = Math.ceil(
-    products.filter((product) => product.quantity <= 20).length /
-      productsPerPage
-  );
+  const numOfPages = Math.ceil(products.length / productsPerPage);
 
   console.log(products);
   return (
     <>
       <div className="cards">
         {products
-          .filter((product) => product.quantity <= 20)
           .map((product) => (
             <ProductCard
+              className={({ product }) =>
+                product.quantity <= 20 ? "sale" : "/"
+              }
               key={product.id}
               id={product.id}
               productName={product.title}

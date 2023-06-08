@@ -60,7 +60,7 @@ export default function ProductCard({
               <Button
                 style={{
                   color: "yellow",
-                  fontWeight: "700",
+                  fontWeight: "600",
                   border: "1px solid #2e3a5b",
                   borderRadius: "1rem",
                   backgroundColor: "#2e3a5b",
