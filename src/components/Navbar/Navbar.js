@@ -31,10 +31,14 @@ export default function Navbar() {
             isActive ? "activeStyles" : "classicStyles"
           }
         >
-          <div className="cart">
+          {cart.length ? (
+            <div className="cart">
+              <ShoppingCartIcon className="cartIcon" fontSize="large" />
+              <div className="cart-lenght">{cart.length}</div>
+            </div>
+          ) : (
             <ShoppingCartIcon className="cartIcon" fontSize="large" />
-            <div className="cart-lenght">{cart.length}</div>
-          </div>
+          )}
         </NavLink>
       </div>
     </header>

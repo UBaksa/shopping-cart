@@ -26,7 +26,6 @@ export default function ProductCard({
       setIsAdded(false);
     }
   }, [id, cart]);
-  // console.log({ isAdded });
 
   return (
     <div className="card">

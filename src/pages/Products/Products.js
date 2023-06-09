@@ -3,6 +3,7 @@ import { AppContext } from "../../context/AppContext";
 import "./Products.css";
 import Pagination from "@mui/material/Pagination";
 import ProductCard from "../../components/Card/ProductCard";
+import SaleProductCard from "../../components/Card/SaleProductCard";
 
 export default function Products() {
   const { products, addToCart, deleteFromCart } = useContext(AppContext);
@@ -19,24 +20,40 @@ export default function Products() {
     <>
       <div className="cards">
         {products
-          .map((product) => (
-            <ProductCard
-              className={({ product }) =>
-                product.quantity <= 20 ? "sale" : "/"
-              }
-              key={product.id}
-              id={product.id}
-              productName={product.title}
-              productPrice={product.price}
-              productImage={product.imageURL}
-              addToCart={() => {
-                addToCart(product.id);
-              }}
-              deleteFromCart={() => {
-                deleteFromCart(product.id);
-              }}
-            />
-          ))
+          .map((product) =>
+            product.quantity <= 20 ? (
+              <ProductCard
+                // className={({ product }) =>
+                //   product.quantity <= 20 ? "sale" : "/"
+                // }
+                key={product.id}
+                id={product.id}
+                productName={product.title}
+                productPrice={product.price}
+                productImage={product.imageURL}
+                addToCart={() => {
+                  addToCart(product.id);
+                }}
+                deleteFromCart={() => {
+                  deleteFromCart(product.id);
+                }}
+              />
+            ) : (
+              <SaleProductCard
+                key={product.id}
+                id={product.id}
+                productName={product.title}
+                productPrice={product.price}
+                productImage={product.imageURL}
+                addToCart={() => {
+                  addToCart(product.id);
+                }}
+                deleteFromCart={() => {
+                  deleteFromCart(product.id);
+                }}
+              />
+            )
+          )
           .slice((page - 1) * productsPerPage, page * productsPerPage)}
       </div>
       <div className="pagination">
