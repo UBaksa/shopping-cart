@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: dosis;
 }
 
 .links {
@@ -45,4 +46,8 @@
   color: black;
   font-weight: bolder;
   background-color: yellow;
+}
+@font-face {
+  font-family: dosis;
+  src: url(../../../public/fonts/Dosis-Bold.ttf);
 }

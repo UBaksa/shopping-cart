@@ -60,3 +60,10 @@
 .buy {
   animation: fade-in 0.3s ease-out;
 }
+@font-face {
+  font-family: dosis;
+  src: url(../../../public/fonts/Dosis-Bold.ttf);
+}
+a {
+  font-family: dosis;
+}

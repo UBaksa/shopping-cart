@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "./Order.css";
+import "./Pay.css";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import toast, { Toaster } from "react-hot-toast";
-import Button from "@mui/material/Button";
 
 export default function Order() {
   const Navigation = useNavigate();
@@ -44,11 +43,10 @@ export default function Order() {
       setPinkod("");
       setPostanskiBroj("");
       setVazido("");
+      toast.success("Purchase successfully !");
       clearCart();
       setTimeout(() => {
-        Navigation(
-          "C:UsershpDesktopReact.JSsecond react projectshopping-cartsrcpagesProductsProducts.js"
-        );
+        Navigation("/Products");
       }, 1300);
     }
   };
@@ -136,7 +134,23 @@ export default function Order() {
           </div>
         </div>
       </div>
-      <Button> ZZ </Button>
+      <button
+        style={{
+          width: "10rem",
+          height: "2.5rem",
+          marginTop: "1rem",
+          borderRadius: "1rem",
+          fontWeight: "bold",
+          color: "yellow",
+          backgroundColor: "#2e3a5b",
+          cursor: "pointer",
+        }}
+        onClick={() => {
+          handleSubmit();
+        }}
+      >
+        Click to buy
+      </button>
     </div>
   );
 }

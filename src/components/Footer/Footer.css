@@ -5,4 +5,9 @@
   align-items: center;
   justify-content: center;
   color: yellow;
+  font-family: dosis;
+}
+@font-face {
+  font-family: dosis;
+  src: url(../../../public/fonts/Dosis-Bold.ttf);
 }
