@@ -13,7 +13,8 @@
 }
 
 .logo {
-  width: 100px;
+  margin-left: 1.5rem;
+  width: 105px;
   height: 100%;
   padding: 10px;
 }
@@ -27,7 +28,7 @@
 }
 
 .classicStyles {
-  padding: 20px;
+  padding: 8px;
   text-decoration: none;
   border-radius: 15px;
   color: yellow;

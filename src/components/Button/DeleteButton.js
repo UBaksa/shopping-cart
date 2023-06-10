@@ -9,18 +9,18 @@ export default function DeleteButton({ onDelete }) {
     onDelete();
   };
   return (
-    <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
+    <Box
+      style={{ color: "yellow" }}
+      sx={{ display: "flex", gap: 1, alignItems: "center" }}
+    >
       <Chip
         variant="outlined"
-        color="danger"
         onClick={handleDelete}
         endDecorator={
-          <ChipDelete color="danger" variant="plain">
-            {/* <DeleteForever /> */}
-          </ChipDelete>
+          <ChipDelete variant="plain">{/* <DeleteForever /> */}</ChipDelete>
         }
       >
-        Clear
+        Remove
       </Chip>
     </Box>
   );

@@ -45,12 +45,12 @@ export default function SaleProductCard({
           <p
             style={{
               fontWeight: "bolder",
-              color: "gray",
-              fontSize: "1.1rem",
-              paddingTop: "0.5rem",
+              color: "black",
+              fontSize: "1.3rem",
+              // paddingTop: "0.5rem",
             }}
           >
-            <del>{productPrice} EUR</del>
+            <u>{discountedPrice} EUR</u>
           </p>
         </Typography>
         <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -61,16 +61,16 @@ export default function SaleProductCard({
                   color: "red",
                   fontWeight: "1000",
                   paddingTop: "0.5rem",
-                  fontSize: "0.75rem",
+                  fontSize: "0.8rem",
                 }}
               >
-                Total price:
+                Prev. price:
               </p>
             </Typography>
             <Typography fontSize="md" fontWeight="lg">
-              <u style={{ color: "black", fontWeight: "bold" }}>
-                {discountedPrice} EUR
-              </u>
+              <del style={{ color: "gray", fontWeight: "bold" }}>
+                {productPrice} EUR
+              </del>
             </Typography>
           </div>
           {!isAdded ? (
@@ -78,7 +78,7 @@ export default function SaleProductCard({
               variant="solid"
               size="sm"
               color="white"
-              style={{ color: "green" }}
+              // style={{ color: "green" }}
               aria-label="Explore Bahamas Islands"
               sx={{ ml: "auto", fontWeight: 700 }}
               onClick={addToCart}
@@ -89,17 +89,17 @@ export default function SaleProductCard({
                   fontSize: "0.9rem",
                   backgroundColor: "yellow",
                   height: "30px",
-                  width: "120px",
+                  width: "110px",
                   borderRadius: "1rem",
                   paddingTop: "6px",
                   border: "solid 2px #2e3a5b",
                 }}
               >
-                ADD TO CART !
+                ADD TO CART
               </p>
             </Button>
           ) : (
-            <DeleteButton onDelete={deleteFromCart} />
+            <DeleteButton style onDelete={deleteFromCart} />
           )}
         </Box>
       </Card>

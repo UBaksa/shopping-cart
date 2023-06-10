@@ -55,7 +55,7 @@ function ContextProvider({ children }) {
       const newCart = cart.filter((product) => product.id !== id);
       return newCart;
     });
-    toast.success("Successfully deleted from cart!");
+    toast.success("Successfully removed from cart!");
   };
 
   const increase = (id) => {
@@ -121,7 +121,13 @@ function ContextProvider({ children }) {
       );
     }
   };
-
+  const clearCart = () => {
+    setProducts(productsJSON);
+    setCart(() => {
+      const newCart = [];
+      return newCart;
+    });
+  };
   const values = {
     products,
     setProducts,
@@ -130,6 +136,7 @@ function ContextProvider({ children }) {
     deleteFromCart,
     increase,
     decrease,
+    clearCart,
   };
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;
 }
