@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../../context/AppContext";
 import toast, { Toaster } from "react-hot-toast";
+import Button from "@mui/material/Button";
 
 export default function Order() {
   const Navigation = useNavigate();
@@ -60,9 +61,7 @@ export default function Order() {
       <div className="forma">
         <div className="first">
           <div className="name">
-            <label htmlFor="ime" className="labell">
-              Name on card
-            </label>
+            <label htmlFor="ime">Name on card:</label>
             <br></br>
             <input
               type="text"
@@ -73,9 +72,71 @@ export default function Order() {
               required
             />
           </div>
+          <div className="card-number">
+            <label htmlFor="brojkartice">Card number:</label>
+            <br></br>
+            <input
+              type="text"
+              id="brojkartice"
+              value={brojKartice}
+              onChange={(e) => setBrojKartice(e.target.value)}
+              required
+              placeholder=" xxxx xxxx xxxx xxxx"
+            />
+          </div>
+          <div className="pinkod">
+            <label htmlFor="pinkod">Pin code:</label>
+            <br></br>
+            <input
+              type="password"
+              id="pinkod"
+              value={pinkod}
+              onChange={(e) => setPinkod(e.target.value)}
+              required
+              placeholder="xxxx"
+            />
+          </div>
         </div>
-        <div className="second"></div>
+        <div className="second">
+          <div className="vazido">
+            <label htmlFor="vazido">Valid until:</label>
+            <br></br>
+            <input
+              type="text"
+              id="vazido"
+              value={vazido}
+              onChange={(e) => setVazido(e.target.value)}
+              required
+              placeholder="mm/yyyy"
+            />
+          </div>
+          <div className="grad">
+            <label htmlFor="grad">City & State:</label>
+            <br></br>
+            <input
+              type="text"
+              id="grad"
+              value={grad}
+              onChange={(e) => setGrad(e.target.value)}
+              required
+              placeholder="e.g Albequrqie/New Mexico"
+            />
+          </div>
+          <div className="postal">
+            <label htmlFor="postal">ZIP / Postal code</label>
+            <br></br>
+            <input
+              type="text"
+              id="postal"
+              value={postanskiBroj}
+              onChange={(e) => setPostanskiBroj(e.target.value)}
+              required
+              placeholder="e.g 36300"
+            />
+          </div>
+        </div>
       </div>
+      <Button> ZZ </Button>
     </div>
   );
 }

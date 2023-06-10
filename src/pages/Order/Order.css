@@ -21,3 +21,131 @@
 .forma {
   display: flex;
 }
+.name {
+  text-align: start;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.name label {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.name input {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 2rem;
+  background-color: #2e3a5b;
+  color: yellow;
+  font-weight: bold;
+}
+
+.card-number {
+  text-align: start;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.card-number label {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.card-number input {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 2rem;
+  background-color: #2e3a5b;
+  color: yellow;
+  font-weight: bold;
+}
+
+.pinkod {
+  text-align: start;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.pinkod label {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.pinkod input {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 2rem;
+  background-color: #2e3a5b;
+  color: yellow;
+  font-weight: bold;
+}
+
+.vazido {
+  text-align: start;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.vazido label {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.vazido input {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  width: 7rem;
+  height: 2rem;
+  background-color: #2e3a5b;
+  color: yellow;
+  font-weight: bold;
+}
+.second {
+  margin-left: 10rem;
+}
+
+.grad {
+  text-align: start;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.grad label {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.grad input {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 2rem;
+  background-color: #2e3a5b;
+  color: yellow;
+  font-weight: bold;
+}
+
+.postal {
+  text-align: start;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+.postal label {
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.postal input {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 2rem;
+  background-color: #2e3a5b;
+  color: yellow;
+  font-weight: bold;
+}
