@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
-// import logo from "../../assets/images/logo.png";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { AppContext } from "../../context/AppContext";
 
